@@ -5,7 +5,7 @@ import {
   PieChart, Pie, Cell, Legend
 } from "recharts";
 
-const API = "http://localhost:8000";
+import API from "./config";
 const COLORS = ["#1F4E79", "#e74c3c"];
 
 function StatCard({ title, value, sub, color }) {
