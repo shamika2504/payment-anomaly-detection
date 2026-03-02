@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import psycopg2
@@ -13,6 +14,10 @@ app.add_middleware(
 )
 
 def get_db():
+    database_url = os.getenv("DATABASE_URL")
+    print(f"DATABASE_URL found: {database_url is not None}")
+    if database_url:
+        return psycopg2.connect(database_url, sslmode='require')
     return psycopg2.connect(
         host="localhost",
         port=5433,
