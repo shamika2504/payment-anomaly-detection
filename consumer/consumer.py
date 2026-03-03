@@ -15,11 +15,8 @@ print("Model loaded successfully.")
 
 # Connect to PostgreSQL (port 5433 since we remapped)
 conn = psycopg2.connect(
-    host="localhost",
-    port=5433,
-    database="payments",
-    user="admin",
-    password="admin123"
+    "postgresql://fraud_detection_db_469h_user:7YByS4Y8GQckZTWvjyy33d9ADwhKw9AY@dpg-d6hrm33uibrs73a2uhr0-a.oregon-postgres.render.com/fraud_detection_db_469h",
+    sslmode='require'
 )
 cursor = conn.cursor()
 print("Connected to PostgreSQL.")
