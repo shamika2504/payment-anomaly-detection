@@ -74,4 +74,4 @@ npm install
 npm start
 ```
 
-Open http://localhost:3000 to view the dashboard.
+Open [http://localhost:3000](https://payment-anomaly-detection.vercel.app/) to view the dashboard.
